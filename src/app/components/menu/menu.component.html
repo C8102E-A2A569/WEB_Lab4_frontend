@@ -1,0 +1,14 @@
+<div class="video-container">
+  <video autoplay muted loop id="myVideo" class="video-background">
+      <source src="assets/gradient.mp4" type="video/mp4">
+  </video>
+</div>
+<nav>
+    <ul>
+      <span class="student-info">Romanova Alina P3207 23567</span>
+      <li><a routerLink="/results" *ngIf="authService.isLoggedIn()">Results</a></li>
+      <li><a href="#" (click)="authService.isLoggedIn() ? logout() : login()">
+        {{authService.isLoggedIn() ? 'Log Out' : 'Log In'}}
+      </a></li>
+    </ul>
+  </nav>
